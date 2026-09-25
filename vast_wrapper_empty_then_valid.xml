@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VAST xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vast.xsd" version="3.0">
+
+  <!-- Wrapper #1: structurally empty (no Creatives/MediaFiles of its own).
+       Resolving VASTAdTagURI returns a VAST containing 13 valid InLine ads. -->
+  <Ad id="wrapper-1" sequence="1">
+    <Wrapper>
+      <AdSystem version="1.0">Test-Wrapper-System</AdSystem>
+      <VASTAdTagURI><![CDATA[https://raw.githubusercontent.com/Samarpan2u/13-ads/refs/heads/main/vast_unique_ads_1.xml]]></VASTAdTagURI>
+      <Error><![CDATA[https://example.com/track/error?wrapper=1&errorcode=[ERRORCODE]]]></Error>
+      <Impression><![CDATA[https://example.com/track/impression?wrapper=1]]></Impression>
+      <Creatives/>
+    </Wrapper>
+  </Ad>
+
+  <!-- Wrapper #2: also structurally empty on its own.
+       Resolving VASTAdTagURI returns a VAST containing the 3 x 30s ads. -->
+  <Ad id="wrapper-2" sequence="2">
+    <Wrapper>
+      <AdSystem version="1.0">Test-Wrapper-System</AdSystem>
+      <VASTAdTagURI><![CDATA[https://raw.githubusercontent.com/Samarpan2u/three_30s_ads/refs/heads/main/vast_3_ads_random_30s.xml]]></VASTAdTagURI>
+      <Error><![CDATA[https://example.com/track/error?wrapper=2&errorcode=[ERRORCODE]]]></Error>
+      <Impression><![CDATA[https://example.com/track/impression?wrapper=2]]></Impression>
+      <Creatives/>
+    </Wrapper>
+  </Ad>
+
+</VAST>
